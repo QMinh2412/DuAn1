@@ -46,8 +46,10 @@ a {
 }
 
 .main-content {
-  width: 85%;
-  margin: 0 auto;
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
 }
 /* hiện dấu 3 chấm nếu nd dài quá dòng cho phép */
 .line-clamp {
@@ -418,8 +420,15 @@ a {
   background-color: #2e2100;
 }
 
-.feedback .feedback-item {
+.feedback .feedback-list {
   display: flex;
+  overflow: hidden;
+}
+
+.feedback-item {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
 }
 
 .feedback-item .avatar {
