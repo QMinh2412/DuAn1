@@ -49,6 +49,21 @@ a {
   width: 85%;
   margin: 0 auto;
 }
+/* hiện dấu 3 chấm nếu nd dài quá dòng cho phép */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+.break-all {
+  word-break: break-all;
+}
 
 /* ============== header ================= */
 .header {
@@ -324,6 +339,7 @@ a {
 }
 
 .popular .coure-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background-color: #fff;
